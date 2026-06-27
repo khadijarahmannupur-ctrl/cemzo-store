@@ -1,36 +1,153 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# CemzoStore 🛍️
 
-## Getting Started
+A responsive product catalogue built with **Next.js** for the Cemzo Technologies React Developer Intern assignment.
 
-First, run the development server:
+> Built with Next.js (React framework) to leverage better routing, image optimization, and seamless Vercel deployment — all React fundamentals (Hooks, Context, Components) apply identically.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+---
+
+## ✨ Features
+
+### Required
+- ✅ Product listing with image, name, price, category & rating
+- ✅ Search by product name
+- ✅ Category filter (pill tabs)
+- ✅ Product detail modal (image, title, description, price, rating)
+- ✅ Loading skeletons & error handling
+- ✅ Fully responsive — mobile, tablet & desktop
+
+### Bonus — Level 1
+- ✅ Debounced search (350ms)
+
+### Bonus — Level 2
+- ✅ Dark / Light theme toggle (persisted via `next-themes`)
+- ✅ Custom `useProducts` hook for data fetching
+
+---
+
+## 🖥️ Preview
+
+| Light Mode | Dark Mode |
+|---|---|
+| Navy navbar, cream background | Cream navbar, navy background |
+
+---
+
+## 🗂️ Folder Structure
+
+```
+src/
+├── app/
+│   ├── globals.css          # Tailwind imports + keyframe animations
+│   ├── layout.jsx           # Root layout with ThemeProvider
+│   └── page.jsx             # Home page — search, filter, grid, modal
+│
+├── components/
+│   ├── product/
+│   │   ├── ProductCard.jsx  # Single product card
+│   │   ├── ProductGrid.jsx  # Grid with loading/error/empty states
+│   │   └── ProductModal.jsx # Detail modal (slide-up on mobile)
+│   └── ui/
+│       ├── Navbar.jsx       # Sticky navbar with theme toggle
+│       ├── Footer.jsx       # Footer with links and social icons
+│       ├── SearchBar.jsx    # Debounced search input
+│       ├── CategoryFilter.jsx # Category pill tabs
+│       ├── SkeletonCard.jsx # Skeleton loader
+│       └── StarRating.jsx   # Half-star rating component
+│
+├── hooks/
+│   ├── useProducts.js       # Fetches products + categories
+│   └── useDebounce.js       # Debounce hook (350ms)
+│
+└── services/
+    └── productService.js    # All API calls (fakestoreapi.com)
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+---
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+## 🚀 Getting Started
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+### Prerequisites
+- Node.js 18+
+- npm
 
-## Learn More
+### Installation
 
-To learn more about Next.js, take a look at the following resources:
+```bash
+# 1. Clone the repository
+git clone https://github.com/YOUR_USERNAME/cemzo-store.git
+cd cemzo-store
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+# 2. Install dependencies
+npm install
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+# 3. Run the development server
+npm run dev
+```
 
-## Deploy on Vercel
+Open [http://localhost:3000](http://localhost:3000) in your browser.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+### Production Build
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+```bash
+npm run build
+npm start
+```
+
+---
+
+## 🌐 Live Demo
+
+🔗 [https://cemzo-store.vercel.app](https://cemzo-store.vercel.app)
+
+> Replace with your actual Vercel URL after deployment.
+
+---
+
+## 🛠️ Tech Stack
+
+| Tool | Purpose |
+|---|---|
+| Next.js 16 | React framework (App Router) |
+| Tailwind CSS v4 | Utility-first styling |
+| next-themes | Dark/light theme management |
+| fakestoreapi.com | Mock product data |
+| Vercel | Deployment |
+
+---
+
+## 🎨 Color Palette
+
+| Name | Hex | Usage |
+|---|---|---|
+| Navy | `#0A2947` | Navbar, headings, dark bg |
+| Cream | `#F3E4C9` | Page background, light text |
+| Sage | `#D3D4C0` | Borders, muted elements |
+| Brown | `#8B5E3C` | Accent, price, stars |
+
+---
+
+## 📦 Deploy to Vercel
+
+```bash
+# Option 1 — Vercel CLI
+npm i -g vercel
+vercel
+
+# Option 2 — Connect GitHub repo at vercel.com (recommended)
+# Push to GitHub → Import project on Vercel → Auto deploy ✅
+```
+
+---
+
+## 📋 Evaluation Criteria Coverage
+
+| Criteria | Implementation |
+|---|---|
+| React Fundamentals | Functional components, hooks (`useState`, `useEffect`, `useMemo`, `useCallback`) |
+| State Management | Custom hooks, component-level state |
+| API Integration | `productService.js` → `fakestoreapi.com` |
+| UI/UX | Smooth animations, skeleton loaders, empty & error states |
+| Code Quality | Clean folder structure, reusable components, separation of concerns |
+| Responsiveness | Mobile-first grid, bottom sheet modal on mobile |
+| Bonus Features | Debounced search, dark/light theme |
