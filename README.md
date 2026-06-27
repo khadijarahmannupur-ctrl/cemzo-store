@@ -98,9 +98,8 @@ npm start
 
 ## 🌐 Live Demo
 
-🔗 [https://cemzo-store.vercel.app](https://cemzo-store.vercel.app)
+🔗 [https://cemzo-store-psi.vercel.app](https://cemzo-store-psi.vercel.app)
 
-> Replace with your actual Vercel URL after deployment.
 
 ---
 
