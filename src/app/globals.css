@@ -1,8 +1,29 @@
-@import "tailwindcss";
+/* @import "tailwindcss";
 @import "@heroui/styles";
 
 html {
   color-scheme: light dark;
+}
+
+body {
+  background-color: #F3E4C9;
+}
+
+.dark body {
+  background-color: #0A2947;
+} */
+
+@import "tailwindcss";
+@import "@heroui/styles";
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+@keyframes slideUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to   { opacity: 1; transform: translateY(0); }
 }
 
 body {
