@@ -75,7 +75,7 @@ src/
 
 ```bash
 # 1. Clone the repository
-git clone https://github.com/YOUR_USERNAME/cemzo-store.git
+git clone https://github.com/khadijarahmannupur-ctrl/cemzo-store.git
 cd cemzo-store
 
 # 2. Install dependencies
